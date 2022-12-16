@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level 3</title>
+    <link rel="stylesheet" href="level3.css" type="text/css">
 </head>
 <body>
-    
+    <h1>Roll Roll Roll Your Dic</h1>
+    <form>
+        <p>Settings:</p>
+        <label for="diceCount">How many dice to roll:</label>
+        <select id="diceCount">
+            <option value="1dice">1</option>
+            <option value="2dice">2</option>
+            <option value="3dice">3</option>
+        </select><br>
+        <label for="diceCount">How many times to roll the dice:</label>
+        <input type="text" id="diceRoll" name="diceRoll"><br>
+        <button type="button" id="roll">ROLL</button>
+    </form>
+    <script src="level3.js"></script>
 </body>
 </html>

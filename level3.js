@@ -1,3 +1,5 @@
-let eDice = document.getElementById("dice");
-let textDice = e.options[e.selectedIndex].text;
-
+document.getElementById("roll").onclick = function() {
+    diceCount = document.getElementById("diceCount");
+    diceCountText = e.options[e.selectedIndex].text;
+    diceRollText = document.getElementById("diceRoll");
+}
