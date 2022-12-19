@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="level3.css" type="text/css">
 </head>
 <body>
-    <h1>Roll Roll Roll Your Dic</h1>
+    <h1>Roll Roll Roll Your Dice</h1>
     <form>
         <p>Settings:</p>
         <label for="diceCount">How many dice to roll:</label>
@@ -21,6 +21,63 @@
         <input type="text" id="diceRoll" name="diceRoll"><br>
         <button type="button" id="roll">ROLL</button>
     </form>
+    <p>One Dice</p>
+    <table id="oneDice">
+        <tr>
+            <th>Frequency</th>
+            <th>Doubles</th>
+            <th>Triples</th>
+            <th>Mean</th>
+            <th>Median</th>
+            <th>Mode</th>
+        </tr>
+        <tr>
+            <td id="oneFrequency"></td>
+            <td id="oneDoubles"></td>
+            <td id="oneTriples"></td>
+            <td id="oneMean"></td>
+            <td id="oneMedian"></td>
+            <td id="oneMde"></td>
+        </tr>
+    </table>
+    <p>Two Dice</p>
+    <table id="twoDice">
+        <tr>
+            <th>Frequency</th>
+            <th>Doubles</th>
+            <th>Triples</th>
+            <th>Mean</th>
+            <th>Median</th>
+            <th>Mode</th>
+        </tr>
+        <tr>
+            <td id="twoFrequency"></td>
+            <td id="twoDoubles"></td>
+            <td id="twoTriples"></td>
+            <td id="twoMean"></td>
+            <td id="twoMedian"></td>
+            <td id="twoMode"></td>
+        </tr>
+    </table>
+    <p>Three Dice</p>
+    <table id="threeDice">
+        <tr>
+            <th>Frequency</th>
+            <th>Doubles</th>
+            <th>Triples</th>
+            <th>Mean</th>
+            <th>Median</th>
+            <th>Mode</th>
+        </tr>
+        <tr>
+            <td id="threeFrequency"></td>
+            <td id="threeDoubles"></td>
+            <td id="threeTriples"></td>
+            <td id="threeMean"></td>
+            <td id="threeMedian"></td>
+            <td id="threeMode"></td>
+        </tr>
+    </table>
     <script src="level3.js"></script>
 </body>
 </html>
