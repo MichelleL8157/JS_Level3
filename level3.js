@@ -41,7 +41,7 @@ function setNums() {
         document.getElementById("threeRolls").innerHTML = "";
         for (var k = 0; k < diceRollText; k++) {
             let freqSum = 0;
-            for (var i = 0; i < 4; i++) {
+            for (var i = 0; i < 3; i++) {
                 randNum = Math.round((Math.random() * 5) + 1);
                 diceArr[count] = randNum;
                 count++;
