@@ -12,6 +12,7 @@ document.getElementById("roll").onclick = function() {
 }
 function setNums() {
     let randNum;
+    let count = 0;
     if (diceCountText == 1) {
         document.getElementById("oneFrequency").innerHTML = "";
         document.getElementById("oneRolls").innerHTML =  "";
@@ -28,7 +29,8 @@ function setNums() {
             let freqSum = 0;
             for (var i = 0; i < 2; i++) {
                 randNum = Math.round((Math.random() * 5) + 1);
-                diceArr[i] = randNum;
+                diceArr[count] = randNum;
+                count++;
                 document.getElementById("twoRolls").innerHTML += randNum + ", ";
                 freqSum += randNum;
             }
@@ -41,7 +43,8 @@ function setNums() {
             let freqSum = 0;
             for (var i = 0; i < 4; i++) {
                 randNum = Math.round((Math.random() * 5) + 1);
-                diceArr[i] = randNum;
+                diceArr[count] = randNum;
+                count++;
                 document.getElementById("threeRolls").innerHTML += randNum + ", ";
                 freqSum += randNum;
             }
@@ -64,9 +67,7 @@ function setDoublesTriples() {
                 doublesCount++;
             }
         }
-        for (var i = 0; i < doubles.length; i++) {
-            document.getElementById("twoDoubles").innerHTML = doublesCount;
-        }
+        document.getElementById("twoDoubles").innerHTML = doublesCount;
     } else if (diceCountText == 3) {
         for (var i = 0; i < diceArr.length; i = i + 3) {
             if (diceArr[i] == diceArr[i + 1] || diceArr[i] == diceArr[i + 2] || diceArr[i + 1] == diceArr[i + 2]) {
@@ -76,9 +77,7 @@ function setDoublesTriples() {
                 }
             }
         }
-        for (var i = 0; i < doubles.length; i++) {
-            document.getElementById("threeDoubles").innerHTML = doublesCount;
-        }
+        document.getElementById("threeDoubles").innerHTML = doublesCount;
     }
     //triples
     let triples = [];
@@ -90,9 +89,7 @@ function setDoublesTriples() {
                 triplesCount++;
             }
         }
-        for (var i = 0; i < triples.length; i++) {
-            document.getElementById("threeTriples").innerHTML = triplesCount;
-        }
+        document.getElementById("threeTriples").innerHTML = triplesCount;
     }
 }
 function setMean() {
