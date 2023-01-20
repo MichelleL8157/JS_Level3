@@ -1,83 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery List</title>
-    <link rel="stylesheet" href="css.css" type="text/css">
-
-    <style>
-        .selected{background-color: tan; color: black;font-weight: bold}
-    </style>
-
+    <title>Level 3</title>
+    <link rel="stylesheet" href="level3.css" type="text/css">
 </head>
 <body>
-    <h1>Grocery List</h1>
-    <img src="pics/shopLiftLogo.png" id="img1">
-    <p class="topP">Record items and their prices onto the grocery list below. This table will help you 
-        organize all the necessary items to buy. There are several options to edit the table
-        such as deleting items, adding items, and rearranging the order of priority of certain
-        items.
-    </p>
-    <p class="topP">Note: If an item is not being added to the list, that means it's already on the table.</p>
-    <div><table id="table">
-        <tr>
-            <th>Item Name</th>
-            <th>Price</th>
-            <th>Option</th>
-        </tr>
-        <tr id="row1">
-            <td>Orange Juice</td>
-            <td>5.50</td>
-            <td><input type="button" value="Delete" onclick="deleteRow('1')"></td>
-        </tr>
-        <tr id="row2">
-            <td>Oreos</td>
-            <td>4.50</td>
-            <td><input type="button" value="Delete" onclick="deleteRow('2')"></td>
-        </tr>
-        <tr id="row3">
-            <td>Whipped Cream</td>
-            <td>4.00</td>
-            <td><input type="button" value="Delete" onclick="deleteRow('3')"></td>
-        </tr>
-        <tr id="row4">
-            <td>Cherios</td>
-            <td>2.50</td>
-            <td><input type="button" value="Delete" onclick="deleteRow('4')"></td>
-        </tr>
-    </table></div>
-    <h2>Add Item</h2>
-    <p>Click the images to add these default items into cart.</p>
-    <div class="itemList">
-        <img src="pics/bread.png" class="itemPics" id="bread">
-        <img src="pics/cheese.png" class="itemPics" id="cheese">
-        <img src="pics/milk.png" class="itemPics" id="milk">
-        <img src="pics/greens.png" class="itemPics" id="greens">
-        <img src="pics/fruits.png" class="itemPics" id="fruits">
-        <img src="pics/thanksBundle.png" class="itemPics" id="thanksBundle">
-    </div>
-    <p>If your desired item is not on the default list above, enter the item name on the left 
-        text field and the item price on the right field. When you're done, press the "Add to 
-        List" button. 
-    </p>
+    <h1>Roll Roll Roll Your Dice</h1>
     <form>
-        <input type="text" id ="newItem">
-        <input type="text" id ="newPrice">
-        <input type="button" value="Add to List" onclick="addRow();">
+        <p>Settings:</p>
+        <label for="diceCount">How many dice to roll:</label>
+        <select id="diceCount">
+            <option value="1dice">1</option>
+            <option value="2dice">2</option>
+            <option value="3dice">3</option>
+        </select><br>
+        <label for="diceCount">How many times to roll the dice:</label>
+        <input type="text" id="diceRoll" name="diceRoll"><br>
+        <button type="button" id="roll">ROLL</button>
     </form>
-    <h2 id="special">Switch Priority</h2>
-    <p>If you want to change the order of the list, enter the number of the desired item according
-        to its position from the top then click the up or down arrows to change its order.
-    </p>
-    <p>Note: If you want to change the order of one item only, just press the up and down arrows 
-        as the list will track your changes.</p>
-    <form>
-        <input type="text" id ="switchRow">
-    </form><br>
-    <button onclick="change('up');" class="listBut">&ShortUpArrow;</button>
-    <button onclick="change('down');" class="listBut">&ShortDownArrow;</button>
-    <script src="js.js"></script>
+    <p>One Dice</p>
+    <table id="oneDice">
+        <tr>
+            <th>Rolls</th>
+            <th>Frequency</th>
+            <th>Doubles</th>
+            <th>Triples</th>
+            <th>Mean</th>
+            <th>Median</th>
+            <th>Mode</th>
+        </tr>
+        <tr>
+            <td id="oneRolls"></td>
+            <td id="oneFrequency"></td>
+            <td id="oneDoubles"></td>
+            <td id="oneTriples"></td>
+            <td id="oneMean"></td>
+            <td id="oneMedian"></td>
+            <td id="oneMode"></td>
+        </tr>
+    </table>
+    <p>Two Dice</p>
+    <table id="twoDice">
+        <tr>
+            <th>Rolls</th>
+            <th>Frequency</th>
+            <th>Doubles</th>
+            <th>Triples</th>
+            <th>Mean</th>
+            <th>Median</th>
+            <th>Mode</th>
+        </tr>
+        <tr>
+            <td id="twoRolls"></td>
+            <td id="twoFrequency"></td>
+            <td id="twoDoubles"></td>
+            <td id="twoTriples"></td>
+            <td id="twoMean"></td>
+            <td id="twoMedian"></td>
+            <td id="twoMode"></td>
+        </tr>
+    </table>
+    <p>Three Dice</p>
+    <table id="threeDice">
+        <tr>
+            <th>Rolls</th>
+            <th>Frequency</th>
+            <th>Doubles</th>
+            <th>Triples</th>
+            <th>Mean</th>
+            <th>Median</th>
+            <th>Mode</th>
+        </tr>
+        <tr>
+            <td id="threeRolls"></td>
+            <td id="threeFrequency"></td>
+            <td id="threeDoubles"></td>
+            <td id="threeTriples"></td>
+            <td id="threeMean"></td>
+            <td id="threeMedian"></td>
+            <td id="threeMode"></td>
+        </tr>
+    </table>
+    <script src="level3.js"></script>
 </body>
 </html>
